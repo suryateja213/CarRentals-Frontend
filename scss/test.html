@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .location-selector {
+  position: relative;
+  width: 200px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.current-location {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.location-name {
+  margin-left: 10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  z-index: 1;
+  display: none;
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown li:last-child {
+  border-bottom: none;
+}
+
+.current-location:hover {
+  background-color: #f9f9f9;
+}
+
+.current-location i {
+  margin-left: auto;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+    </style>
+<body>
+    <ul class="sc-bNQFlB URchM">
+        <li class="sc-hizQCF dSgOQo">
+            <div class="sc-eNPDpu fVBwIY">
+                <div class="sc-cgHJcJ hPcraY">
+                    <img src="//in.bmscdn.com/m6/images/common-modules/regions/mumbai.png" alt="MUMBAI" class="sc-fQkuQJ ciyWra"></div>
+                    <span class="sc-dRCTWM JQbba">Mumbai</span></div></li><li class="sc-hizQCF dSgOQo">
+                        <div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/ncr.png" alt="NCR" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Delhi-NCR</span></div></li><li class="sc-hizQCF dSgOQo"><div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/bang.png" alt="BANG" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Bengaluru</span></div></li><li class="sc-hizQCF dSgOQo"><div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/hyd.png" alt="HYD" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Hyderabad</span></div></li><li class="sc-hizQCF dSgOQo"><div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/ahd.png" alt="AHD" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Ahmedabad</span></div></li><li class="sc-hizQCF dSgOQo"><div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/chd.png" alt="CHD" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Chandigarh</span></div></li><li class="sc-hizQCF dSgOQo"><div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/chen.png" alt="CHEN" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Chennai</span></div></li><li class="sc-hizQCF dSgOQo"><div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/pune.png" alt="PUNE" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Pune</span></div></li><li class="sc-hizQCF dSgOQo"><div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/kolk.png" alt="KOLK" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Kolkata</span></div></li><li class="sc-hizQCF dSgOQo"><div class="sc-eNPDpu fVBwIY"><div class="sc-cgHJcJ hPcraY"><img src="//in.bmscdn.com/m6/images/common-modules/regions/koch.png" alt="KOCH" class="sc-fQkuQJ ciyWra"></div><span class="sc-dRCTWM JQbba">Kochi</span></div></li></ul>   
+    <script>
+        const currentLocation = document.querySelector('.current-location');
+        const dropdown = document.querySelector('.dropdown');
+
+        currentLocation.addEventListener('click', () => {
+        dropdown.classList.toggle('show');
+        });
+
+        dropdown.addEventListener('click', (event) => {
+        if (event.target.tagName === 'LI') {
+            currentLocation.querySelector('.location-name').textContent = event.target.textContent;
+            dropdown.classList.remove('show');
+        }
+        });
+    </script>    
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Car Rental Services</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Free HTML Templates" name="keywords" />
+  <meta content="Free HTML Templates" name="description" />
+
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 10px;
+    }
+
+    .grid-item {
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .mgreen {
+      background-color: rgb(193, 231, 149);
+    }
+
+    table {
+      border-radius: 25px;
+    }
+
+    .round {
+      border-radius: 25px;
+    }
+
+    td,
+    th {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      padding: 35px;
+    }
+
+    li h4,
+    * h4 {
+      text-align: left;
+      color: rgb(53, 81, 55);
+    }
+
+    .det p {
+      text-align: left;
+    }
+  </style>
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
+  <link rel="stylesheet" href="css/mystyle.css" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Topbar Start -->
+  <div class="container-fluid border-bottom d-none d-lg-block">
+    <div class="row gx-0">
+      <div class="col-lg-4 text-center py-2">
+        <div class="d-inline-flex align-items-center">
+          <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+          <div class="text-start" style="cursor: pointer">
+            <a href="location.html">
+              <h6 class="text-uppercase mb-1">Your Location</h6>
+              <span id="user_location">Select location</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center border-start border-end py-2">
+        <div class="d-inline-flex align-items-center">
+          <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+          <div class="text-start">
+            <h6 class="text-uppercase mb-1">Email Us</h6>
+            <span>CarRental@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center py-2">
+        <div class="d-inline-flex align-items-center">
+          <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+          <div class="text-start">
+            <h6 class="text-uppercase mb-1">Call Us</h6>
+            <span>+91 63013 41459</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 mb-5">
+    <a href="home.html" class="navbar-brand ms-lg-5">
+      <div style="display: flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="green" class="bi bi-car-front"
+          viewBox="0 0 16 16">
+          <path
+            d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z" />
+          <path
+            d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z" />
+        </svg>
+        <h1 class="m-0 text-uppercase text-dark">
+          <i class="bi bi-car-front fs-1 text-primary me-3 homeicon"></i>Car
+          Rental Services
+        </h1>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto py-0">
+        <a href="home.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link active">About</a>
+        <span id="n-user-name" class="nav-item nav-link"></span>
+        <a href="login.html" id="login-logout" class="nav-item nav-link">Login</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+            <img width="25px" src="img/settings.png" alt="">
+          </a>
+          <div class="dropdown-menu m-0 ddm">
+            <a href="profile.html" id="user-name" class="dropdown-item">Profile</a>
+            <!-- <a href="setting" class="dropdown-item">Settings</a> -->
+            <a href="map.html" class="dropdown-item">Track my car</a>
+            <a href="host.html" class="dropdown-item">Become a Host</a>
+          </div>
+        </div>
+        <a href="gallery.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Book Now <i
+            class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- About Start -->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row gx-5">
+        <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px">
+          <div style="display: flex;" class="my-5">
+            <div class="col-8">
+              <input type="file" id="pro-pic" class="col-12 h-100" id="profile_picture" name="profile_picture"
+                value="change profile" />
+            </div>
+            <button class="col-4 btn btn-primary" id="submit_pic">Save changes</button>
+          </div>
+          <div class="position-relative" style="height: 200px !important;">
+            <img class="position-absolute w-100 rounded" id="picture" src="" style="object-fit: cover;" />
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="border-start border-5 border-primary ps-5 mb-5">
+            <h1 class="display-5 text-uppercase mb-0">
+              We always take good care of your cars
+            </h1>
+          </div>
+          <div class="togg">
+            <div style="margin-left: 200px !important;">
+              <img style="height: 400px;"
+                src="data:image/png;base64,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"
+                alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About End -->
+
+
+  <div class="container-fluid py-5">
+    <div class="container">
+      <h1>Your Booked Cars</h1>
+      <div class="grid-container car-book">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between">
+        <h1>Your Cars</h1>
+        <a href="host.html">
+          <div class="add-car" style="margin-left: 200px">
+            <button class="btn btn-primary">Add Car</button>
+          </div>
+        </a>
+      </div>
+      <div class="grid-container car-tab">
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Start -->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px">
+        <h6 class="text-primary text-uppercase">Vehicles</h6>
+        <h1 class="display-5 text-uppercase mb-0">Vehicle for rent</h1>
+      </div>
+      <div class="owl-carousel product-carousel">
+        <div class="pb-5">
+          <div class="product-item position-relative bg-light d-flex flex-column text-center">
+            <img class="img-fluid mb-4 box-img" src="img/product-1.png" alt="" />
+            <h6 class="text-uppercase">Suzuki Swift</h6>
+            <h5 class="text-primary mb-0">$199.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-5">
+          <div class="product-item position-relative bg-light d-flex flex-column text-center">
+            <img class="img-fluid mb-4 box-img" src="img/product-2.png" alt="" />
+            <h6 class="text-uppercase">Suderia Ferrari</h6>
+            <h5 class="text-primary mb-0">$199.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-5">
+          <div class="product-item position-relative bg-light d-flex flex-column text-center">
+            <img class="img-fluid mb-4 box-img" src="img/product-3.png" alt="" />
+            <h6 class="text-uppercase">Mercedes AMG One</h6>
+            <h5 class="text-primary mb-0">$199.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-5">
+          <div class="product-item position-relative bg-light d-flex flex-column text-center">
+            <img class="img-fluid mb-4 box-img" src="img/product-4.png" alt="" />
+            <h6 class="text-uppercase">Honda Civic-R</h6>
+            <h5 class="text-primary mb-0">$199.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-5">
+          <div class="product-item position-relative bg-light d-flex flex-column text-center">
+            <img class="img-fluid mb-4 box-img" src="img/product-2.png" alt="" />
+            <h6 class="text-uppercase">Quality Pet Foods</h6>
+            <h5 class="text-primary mb-0">$199.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
+              <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Team End -->
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-light mt-5 py-5">
+    <div class="container pt-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">
+            Get In Touch
+          </h5>
+          <p class="mb-4">
+            No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et
+            et dolor sed dolor
+          </p>
+          <p class="mb-2">
+            <i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New
+            York, USA
+          </p>
+          <p class="mb-2">
+            <i class="bi bi-envelope-open text-primary me-2"></i>info@example.com
+          </p>
+          <p class="mb-0">
+            <i class="bi bi-telephone text-primary me-2"></i>+012 345 67890
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">
+            Quick Links
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
+              Services</a>
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The
+              Team</a>
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+              Blog</a>
+            <a class="text-body" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact
+              Us</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">
+            Popular Links
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
+              Services</a>
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The
+              Team</a>
+            <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+              Blog</a>
+            <a class="text-body" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact
+              Us</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">
+            Newsletter
+          </h5>
+          <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control p-3" placeholder="Your Email" />
+              <button class="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+          <h6 class="text-uppercase mt-4 mb-3">Follow Us</h6>
+          <div class="d-flex">
+            <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-twitter"></i></a>
+            <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="btn btn-outline-primary btn-square me-2" href="#"><i class="bi bi-linkedin"></i></a>
+            <a class="btn btn-outline-primary btn-square" href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-12 text-center text-body">
+          <a class="text-body" href="">Terms & Conditions</a>
+          <span class="mx-1">|</span>
+          <a class="text-body" href="">Privacy Policy</a>
+          <span class="mx-1">|</span>
+          <a class="text-body" href="">Customer Support</a>
+          <span class="mx-1">|</span>
+          <a class="text-body" href="">Payments</a>
+          <span class="mx-1">|</span>
+          <a class="text-body" href="">Help</a>
+          <span class="mx-1">|</span>
+          <a class="text-body" href="">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-dark text-white-50 py-4">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-md-0">
+            &copy; <a class="text-white" href="#">Your Site Name</a>. All
+            Rights Reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            Designed by
+            <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/header.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+.icon {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#left {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 0px 1px 1px #e0e0e0;
+  border-radius: 4px;
+  position: fixed;
+}
+
+#left > p {
+  font-weight: 500;
+  color: black;
+  font-size: 15px;
+  line-height: 0;
+}
+
+.list {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  background: #f5f5f5;
+}
+
+.list-item {
+  width: 200px;
+  text-align: center;
+  flex: 1;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: 0 10px;
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.line {
+  color: solid black;
+  height: 35px;
+  border: 1px solid #e0e0e0;
+}
+
+.b-1 {
+  border: 3px solid #766e6e !important;
+}
+
+.fil-btn {
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
